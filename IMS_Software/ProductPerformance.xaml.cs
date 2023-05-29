@@ -53,7 +53,7 @@ namespace COnnection_test
                "FROM Purchase " +
                "WHERE ProductID = @id " +
                "AND purchase_date >= @startDate "+
-               "AND purchase_date >= @endDate ";
+               "AND purchase_date <= @endDate ";
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
                 // Open the database connection
